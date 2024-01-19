@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background: #696e70;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title-box {
+  background-color: white;
+  position: absolute;
+  z-index: 999;
+  padding: 50px;
+  top: 180px;
+  box-shadow: -13px 13px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 80px;
+  text-align: center;
+}
+header p {
+  font-size: 25px;
+  text-align: center;
+} 
+.title-box, h1, header p, li {
+  font-family: 'Kenia', sans-serif;
+}
+
+/* sliders */
+.slider {
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: clac(500px*4);
+  height: 720px;
+  animation: glisse 12s infinite ease;
+}
+.slide {
+  opacity: 0.7;
+}
+
+
+@keyframes glisse {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-400px);
+  }
+  33% {
+    transform: translateX(-800px);
+  }
+  66% {
+    transform: translateX(-1160px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+/* nav menu */
+.section-menu {
+  /* width: 100%;
+  display: flex; */
+  justify-content: center;
+  transform: translateY(-130px);
+  display: flex;
+  flex-direction: row;
+}
+
+.menu {
+  width: calc(500px*4);
+}
+.menu ul {
+  display: flex;
+  flex-direction: row;
+} 
+
+.menu ul li{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s all;
+}
+.menu ul li:hover {
+  transform: scale(0.90);
+  transition: 0.3s all;
+}
+.menu ul li a {
+  color: white;
+  font-size: 50px;
+  text-decoration: none;
+}
+
+.nav-item {
+  height: 300px;
+  flex: 1;
+}
+
+.pizza {
+  background: url(css/assets/img/pizza-banner.jpg) 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.salade {
+  background: url(css/assets/img/salad-banner.jpg) 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.burger {
+  background: url(css/assets/img/burger-banner.jpg) 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.boisson {
+  background: url(css/assets/img/boisson-banner.jpg) 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Section plat */
+
+.item {
+  background-color: white;
+  margin: 20px;
+  display: flex;
+  cursor: pointer;
+  transition: 0.3s all;
+  width: 60%;
+}
+
+.item:hover {
+  transition: 0.3s all;
+  box-shadow: -13px 13px 2px 1px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+.item-info {
+  padding: 20px;
+  line-height: 40px;
+}
+
+section {
+  padding: 100px;
+  font-family: 'Martel', serif;
+}
+
+.item-info h3 {
+  font-size: 25px;
+}
+.item-info hr {
+  margin-top: 10px;
+  /* margin-bottom: 10px; */
+  opacity: 0.5;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 22px;
+}
+section img {
+  height: 300px;
+}
+
+  /* menu bloqué a droite */
+
+.sticky {
+  position: fixed;
+  width: 500px;
+  top: 33vh;
+  right: 50px;
+  transform: translateY(-10px);
+  transition: 0.6 all;
+}
+.sticky + #main {
+  padding-top: 200px;
+}
+.sticky nav.menu ul {
+  flex-direction: column;
+}
+.sticky nav.menu ul li {
+  margin: 2px;
+  box-shadow: -13px 13px 2px 1px rgba(0, 0, 0, 0.2);
+}
+footer {
+  font-size: 22px;
+  color: white;
+  padding: 20px;
+  font-family: 'Martel', serif;
+}
+
+  
